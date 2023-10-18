@@ -1,0 +1,148 @@
+/* ============= GLOBAL CSS =============== */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  background: #f8fafc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #0f172a;
+}
+
+p {
+  margin: 0;
+}
+
+h5 {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: capitalize;
+  letter-spacing: 1px
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+/* ============= PROJECT CSS =============== */
+
+.slider-container {
+  margin: 0 auto;
+  margin-top: 10rem;
+  width: 80vw;
+  max-width: 800px;
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+}
+.slide {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease-in-out all;
+}
+.person-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  border: 4px solid #ddd6fe;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.name {
+  text-transform: uppercase;
+  color: #8b5cf6;
+  margin-bottom: 0.75rem;
+}
+.title {
+  text-transform: capitalize;
+  color: #334155;
+  margin-bottom: 0.75rem;
+}
+.text {
+  max-width: 35em;
+  margin: 0 auto;
+  margin-top: 2rem;
+  line-height: 2;
+  color: #64748b;
+}
+.icon {
+  font-size: 3rem;
+  margin-top: 1rem;
+  color: #8b5cf6;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 200px;
+  background: #64748b;
+  color: #fff;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: grid;
+  place-items: center;
+  border-color: transparent;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3 ease-in-out all;
+}
+.prev:hover,
+.next:hover {
+  background: #8b5cf6;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+@media screen and (min-width: 800px) {
+  .text {
+    max-width: 45em;
+  }
+  .prev,
+  .next {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* ============= Slick Carousel =============== */
+
+.slick-container {
+  margin: 0 auto;
+  margin-top: 10rem;
+  width: 80vw;
+  max-width: 800px;
+  text-align: center;
+}
+.slick-slide img {
+  display: inline-block;
+}
+
+.slick-prev::before {
+  color: #8b5cf6 !important;
+}
+.slick-next::before {
+  color: #8b5cf6 !important;
+}
