@@ -20,10 +20,18 @@ const Carousel = () => {
 
   return (
     <section className="slider-container">
-      {people.map((person) => {
+      {people.map((person, personIndex) => {
         const { id, image, name, quote, title } = person;
         return (
-          <article key={id} className="slide">
+          <article
+            key={id}
+            className="slide"
+            style={{
+              transform: `translateX(${100 * (personIndex - currentPerson)})%`,
+              visibility: personIndex === currentPerson ? "visible" : "hidden",
+              opacity: personIndex === currentPerson ? 1 : 0,
+            }}
+          >
             <img src={image} alt={name} className="person-img" />
             <h5 className="name">{name}</h5>
             <p className="title">{title}</p>
