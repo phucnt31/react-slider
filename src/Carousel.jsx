@@ -1,13 +1,22 @@
 import React, { useState } from "react";
-import { shortList } from "./data";
+import { list, shortList } from "./data";
 import { FaQuoteRight } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const Carousel = () => {
-  const [people, setPeople] = useState(shortList);
+  const [people, setPeople] = useState(list);
+  const [currentPerson, setCurrentPerson] = useState(0);
 
-  const prevPerson = () => {};
-  const nextPerson = () => {};
+  const prevPerson = () => {
+    setCurrentPerson((index) => {
+      return (index + 1) % people.length;
+    });
+  };
+  const nextPerson = () => {
+    setCurrentPerson((index) => {
+      return (index - 1 + people.length) % people.length;
+    });
+  };
 
   return (
     <section className="slider-container">
